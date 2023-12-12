@@ -6,7 +6,7 @@
 /*   By: soksak <soksak@42istanbul.com.tr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 00:48:32 by soksak            #+#    #+#             */
-/*   Updated: 2023/12/12 14:08:35 by soksak           ###   ########.fr       */
+/*   Updated: 2023/12/12 14:15:28 by soksak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	main(void)
 	signal(SIGUSR1, charhandler);
 	signal(SIGUSR2, charhandler);
 	ft_printf("Server Pid = %d\n", pid);
-
 	while (1)
 	{
 		pause();

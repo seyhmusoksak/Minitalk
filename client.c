@@ -6,7 +6,7 @@
 /*   By: soksak <soksak@42istanbul.com.tr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 00:48:30 by soksak            #+#    #+#             */
-/*   Updated: 2023/12/12 13:41:41 by soksak           ###   ########.fr       */
+/*   Updated: 2023/12/12 14:15:54 by soksak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	ft_atoi(const char *str)
 	}
 	return (result);
 }
-
 
 void	pushsignal(int pid, char c)
 {
