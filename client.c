@@ -6,16 +6,16 @@
 /*   By: soksak <soksak@42istanbul.com.tr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 00:48:30 by soksak            #+#    #+#             */
-/*   Updated: 2023/12/11 01:59:20 by soksak           ###   ########.fr       */
+/*   Updated: 2023/12/12 13:41:41 by soksak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
-	int result;
+	int	result;
 
 	i = 0;
 	result = 0;
@@ -48,9 +48,9 @@ void	pushsignal(int pid, char c)
 	}
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	int pid;
+	int	pid;
 	int	i;
 
 	i = 0;

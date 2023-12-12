@@ -1,44 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: soksak <soksak@42istanbul.com.tr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 00:48:32 by soksak            #+#    #+#             */
-/*   Updated: 2023/12/12 14:08:35 by soksak           ###   ########.fr       */
+/*   Created: 2023/10/28 23:12:45 by soksak            #+#    #+#             */
+/*   Updated: 2023/12/12 14:09:37 by soksak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	charhandler(int signum)
-{
-	static int		i = 0;
-	static char		c = 0;
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdlib.h>
 
-	if (signum == SIGUSR1)
-		c |= (1 << i);
-	i++;
-	if (i == 8)
-	{
-		write(1, &c, 1);
-		i = 0;
-		c = 0;
-	}
-}
+int		ft_printf(const char *format, ...);
+int		ft_findformat(va_list args, char format);
+int		ft_printchar(int c);
+int		ft_printstr(char *str);
+int		ft_printnum(int num);
 
-int	main(void)
-{
-	int	pid;
-
-	pid = getpid();
-	signal(SIGUSR1, charhandler);
-	signal(SIGUSR2, charhandler);
-	ft_printf("Server Pid = %d\n", pid);
-
-	while (1)
-	{
-		pause();
-	}
-}
+#endif
