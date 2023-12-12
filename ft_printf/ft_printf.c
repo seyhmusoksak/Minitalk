@@ -6,7 +6,7 @@
 /*   By: soksak <soksak@42istanbul.com.tr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 15:26:33 by soksak            #+#    #+#             */
-/*   Updated: 2023/10/31 17:34:54 by soksak           ###   ########.fr       */
+/*   Updated: 2023/12/12 14:22:49 by soksak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,6 @@ int	ft_findformat(va_list args, char format)
 		lenght += ft_printstr(va_arg(args, char *));
 	else if (format == 'i' || format == 'd')
 		lenght += ft_printnum(va_arg(args, int));
-	else if (format == 'p')
-		lenght += ft_printf_ptr(va_arg(args, unsigned long long));
-	else if (format == 'x' || format == 'X')
-		lenght += ft_printf_hex(va_arg(args, unsigned int), format);
-	else if (format == 'u')
-		lenght += ft_printf_unsigned(va_arg(args, unsigned int));
 	else if (format == '%')
 		lenght += ft_printchar('%');
 	else
